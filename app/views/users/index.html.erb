@@ -1,0 +1,27 @@
+
+	<% if @users %>
+      					<table class="table">
+ 							<tbody>
+ 								<% @users.each do |user| %>
+ 								<td>
+ 									<table>
+ 										<tbody>
+  										<tr>
+  										<td><%= link_to (image_tag user.image.url(:small), class: 'image'), user %></td>
+  										</tr>
+  										<tr>
+  										<td><%= user.email %></td>
+  										</tr>
+  										<tr>
+  										<td><%= user.fullname %></td>
+  										</tr>
+      									<tr>
+      									<td><%= link_to 'See Profile', user_path(user) %></td>
+      									</tr>
+      									</tbody>
+      								</table>
+      							</td>
+      							<% end %>
+							</tbody>
+						</table>
+	<% end %>

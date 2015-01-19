@@ -1,0 +1,15 @@
+<div class="row">
+  <% @users.each do |user| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag user.image.url(:medium), class: 'image'), user %>
+        <%= user.email %>
+        <br>
+  		<%= user.fullname %>
+  		<br>
+      	<%= link_to 'See Profile', user_path(user) %>
+      	<br>
+      </div>
+    </div>
+  <% end %>
+</div>

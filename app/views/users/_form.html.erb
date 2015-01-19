@@ -1,0 +1,22 @@
+
+      				<%= image_tag @user.image.url(:medium) %>
+      				<table class="table">
+ 						<tbody>
+ 							<tr>  
+ 								<td><strong>Full Name:</strong></td>
+           		 				<td><%= @user.firstname %> <%= @user.lastname %></td>
+       		 				</tr>
+							<tr>
+								<td><strong>Email:</strong></td>
+								<td><%= @user.email %></td>
+							</tr>
+							<tr>
+								<td><strong>Interests:</strong></td>
+								<td><%= link_to 'Interests', url_for(@user)+"/interests" %></td>
+							</tr>
+							<tr>
+								<td><strong>Resume:</strong></td>
+								<td><%= link_to 'Resume', url_for(@user)+"/resume" %></td>
+							</tr>
+    					</tbody>
+					</table>
